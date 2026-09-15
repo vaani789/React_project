@@ -349,7 +349,12 @@ const Header = () => {
                         <div className="logo">
                             <Link to="/">
                                 <img
-                                    src="assets/img/logo/vero without bg.png"
+                                    src={
+                                    
+                                    isSticky
+                                        ? "assets/img/logo/vero without bg.png"
+                                        : "assets/img/home-1/whitelogo.png"
+                                    }
                                     alt="logo"
                                 />
                             </Link>
