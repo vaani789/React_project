@@ -349,7 +349,7 @@ const Header = () => {
                         <div className="logo">
                             <Link to="/">
                                 <img
-                                    src="assets/img/logo/white-logo.svg"
+                                    src="assets/img/logo/vero without bg.png"
                                     alt="logo"
                                 />
                             </Link>
