@@ -79,7 +79,7 @@ const Footer = () => {
                                         <div className="widget-head">
                                             <Link to="/" className="footer-logo">
                                                 <img
-                                                    src="assets/img/home-1/footer-logo.svg"
+                                                    src="assets/img/home-1/whitelogo.png" style={{ width: 300}} 
                                                     alt="Vero"
                                                 />
                                             </Link>

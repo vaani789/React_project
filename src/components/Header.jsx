@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
     const location = useLocation();
 
-    // Home page par menu white, baaki pages par black
+    const [isSticky, setIsSticky] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsSticky(true);
+            } else {
+                setIsSticky(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    // Home page:
+    // Normal = white
+    // Sticky = black
     const isHomePage = location.pathname === "/";
-    const menuColor = isHomePage ? "#fff" : "#000";
+    const menuColor = isHomePage && !isSticky ? "#fff" : "#000";
+
+    
 
     return (
         <>
@@ -21,8 +43,14 @@ const Header = () => {
                         {/* Logo */}
                         <Link className="navbar-brand" to="/">
                             <img
-                                src="assets/img/logo/black-logo.svg"
-                                alt="logo"
+                                // src="assets/img/logo/vero without bg.png" style={{width:200}}
+                                src={
+                                    
+                                    isSticky
+                                        ? "assets/img/logo/vero without bg.png"
+                                        : "assets/img/home-1/whitelogo.png"
+                                }
+                                alt="logo" style={{ width: "200px",height: "auto"}}
                             />
                         </Link>
 
