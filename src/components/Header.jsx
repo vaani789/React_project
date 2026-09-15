@@ -323,12 +323,9 @@ const Header = () => {
                                 <div className="logo">
                                     <Link to="/">
                                         <img
-                                            src={
-                                            isSticky
-                                                ? "assets/img/logo/vero without bg.png"
-                                                : "assets/img/home-1/whitelogo.png"
-                                            }
-                                            alt="logo"
+                                            src= "assets/img/logo/vero without bg.png"
+                                        
+                                            alt="logo" style={{ width: "140px",height: "auto"}}
                                         />
                                     </Link>
                                 </div>
@@ -353,13 +350,9 @@ const Header = () => {
                         <div className="logo">
                             <Link to="/">
                                 <img
-                                    src={
-                                    
-                                    isSticky
-                                        ? "assets/img/logo/vero without bg.png"
-                                        : "assets/img/home-1/whitelogo.png"
-                                    }
-                                    alt="logo"
+                                    src="assets/img/home-1/whitelogo.png"
+                                        
+                                    alt="logo" style={{ width: "200px",height: "auto"}}
                                 />
                             </Link>
                         </div>
